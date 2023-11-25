@@ -11,20 +11,22 @@
 using namespace ns3;
 NS_LOG_COMPONENT_DEFINE ("DceIperf");
 // ===========================================================================
+//   Topology
 //
-//         node 0                 node 1
-//   +----------------+    +----------------+
-//   |                |    |                |
-//   +----------------+    +----------------+
-//   |    10.1.1.1    |    |    10.1.1.2    |
-//   +----------------+    +----------------+
-//   | point-to-point |    | point-to-point |
-//   +----------------+    +----------------+
-//           |                     |
-//           +---------------------+
-//                5 Mbps, 2 ms
+//         node 0                 node 1                node 2
+//   +----------------+    +------------------+     +----------------+
+//   |    ns-3 TCP    |    |    ns-3 TCP      |     |    ns-3 TCP    |
+//   +----------------+    +------------------+     +----------------+
+//   |    10.1.1.1    |    |10.1.1.2 |10.1.2.1|     |    10.1.2.2    |
+//   +----------------+    +------------------+     +----------------+
+//   | point-to-point |    | point-to-point   |     | point-to-point |
+//   +----------------+    +------------------+     +----------------+
+//           |                     |    |                     |
+//           +---------------------+    +---------------------+
+//                100 Mbps, 1 ms               100 Mbps, 1ms
 //
-// 2 nodes : iperf client en iperf server ....
+// This experience do iperf with a router in between node0 and node 2
+// 3 nodes : iperf client, router and iperf server ....
 //
 // Note : Tested with iperf 2.0.5, you need to modify iperf source in order to
 //        allow DCE to have a chance to end an endless loop in iperf as follow:

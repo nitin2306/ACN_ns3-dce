@@ -1,14 +1,14 @@
 
-# dce-iperf-3-nodes
+# dce-iperf-multi
 
 
 
 
 ## Objective
-It sets up a connection between two nodes via a router and runs an iperf client-server application to measure network performance.
+It sets up a connection between two nodes across series of n(configurable) nodes connected by point-to-point links and runs an iperf client-server application to measure network performance.
 ##  Topology
-- The network topology consists of two nodes connected by a router between them. 
-- Each node has its own IP address automatically assigned. 
+- The network topology consists of n+2 nodes connected by point-to-point links. 
+- Each node has its own IP address automatically assigned.
 - The iperf client runs on one node while the iperf server runs on the other. 
 - The network is simulated with a bandwidth of 5Mbps and a delay of 2ms (Configurable) for each link.
 ## How to use

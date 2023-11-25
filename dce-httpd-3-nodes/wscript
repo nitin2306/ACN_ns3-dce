@@ -7,8 +7,8 @@ def configure(conf):
 
 def build(bld):
     bld.build_a_script('dce', needed = ['core', 'internet', 'dce', 'point-to-point', 'netanim', 'flow-monitor'],
-				  target='bin/dce-http',
-				  source=['dce-http.cc', 'ccnx/misc-tools.cc'],
+				  target='bin/dce-httpd-3-nodes',
+				  source=['dce-httpd-3-nodes.cc', 'misc-tools.cc'],
 #				  linkflags=['-L/usr/local/lib'],
 #				  lib=['foolib']
 				  )
