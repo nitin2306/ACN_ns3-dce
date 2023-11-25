@@ -6,7 +6,7 @@
 #include "ns3/applications-module.h"
 #include "ns3/netanim-module.h"
 #include "ns3/constant-position-mobility-model.h"
-#include "ccnx/misc-tools.h"
+#include "misc-tools.h"
 
 using namespace ns3;
 NS_LOG_COMPONENT_DEFINE ("DceIperf");
