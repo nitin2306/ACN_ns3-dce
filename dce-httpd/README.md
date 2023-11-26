@@ -7,7 +7,7 @@
 ## Objective
 This is to simulate a simple HTTP communication between two nodes using the ns-3 network simulator.
 ##  Topology
-- The network topology consists of two nodes connected by a point to point link.
+- The network topology consists of two nodes connected by a point to point link between them.
 - One node acts as an HTTP server, serving an HTML file, while other node acts as an HTTP client, requesting the file from the server.
 - The network is stimulated with a bandwidth of 100Mbps and delay of 1ms (configurable).
 ## How to use
